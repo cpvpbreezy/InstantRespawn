@@ -2,7 +2,7 @@
 
 <img src="art/logo-512.png" width="160" align="right" alt="Instant Respawn icon">
 
-A tiny client-side Fabric mod for Minecraft **1.21.11**.
+A tiny client-side Fabric mod for Minecraft **1.21.11** and **26.1 – 26.3**.
 
 In vanilla, the **Respawn** button on the death screen is greyed out for one second
 (20 ticks) after you die. Instant Respawn makes it clickable the moment the death screen opens.
@@ -18,16 +18,23 @@ In vanilla, the **Respawn** button on the death screen is greyed out for one sec
 
 ## Install
 
-1. Install [Fabric Loader](https://fabricmc.net/use/) for 1.21.11.
-2. Drop `instant-respawn-<version>+1.21.11.jar` into your `mods` folder.
+1. Install [Fabric Loader](https://fabricmc.net/use/) for your Minecraft version.
+2. Drop the matching jar into your `mods` folder:
+
+| Minecraft | Jar |
+|---|---|
+| 1.21.11 | `instant-respawn-<version>+1.21.11.jar` |
+| 26.1 – 26.3 | `instant-respawn-<version>+26.x.jar` |
 
 ## Build
 
 ```sh
-./gradlew build
+./gradlew build            # 1.21.11 (JDK 21)  -> build/libs
+cd mc26 && ./gradlew build # 26.1 - 26.3 (JDK 25) -> mc26/build/libs
 ```
 
-The jar ends up in `build/libs/`. Needs JDK 21.
+From 26.1 Minecraft is no longer obfuscated, so the 26.x build in `mc26/` uses Mojang's names directly
+(the field is called `delayTicker` there instead of `ticksSinceDeath`).
 
 ## How it works
 
