@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.cpvpbreezy.instantrespawn.mixin",
+  "refmap": "instantrespawn.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "DeathScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

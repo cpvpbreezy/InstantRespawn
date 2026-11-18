@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "instantrespawn",
+  "version": "${version}",
+  "name": "Instant Respawn",
+  "description": "Makes the Respawn button on the death screen clickable instantly instead of after the vanilla one-second delay.",
+  "authors": [
+    "cpvpbreezy"
+  ],
+  "contact": {
+    "sources": "https://github.com/cpvpbreezy/InstantRespawn",
+    "issues": "https://github.com/cpvpbreezy/InstantRespawn/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/instantrespawn/icon.png",
+  "environment": "client",
+  "mixins": [
+    "instantrespawn.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11"
+  }
+}
